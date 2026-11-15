@@ -1,0 +1,157 @@
+{
+  "generatedAt": "2026-11-15T21:54:26.898Z",
+  "repos": {
+    "x360-native": {
+      "name": "x360-native",
+      "url": "https://github.com/fabegalo/x360-native",
+      "description": "An open-source Xbox 360 recompilation project bringing original games and the authentic dashboard to modern PCs. Experimental and actively developed.",
+      "stars": 4,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "C++",
+      "license": "BSD-3-Clause",
+      "topics": [
+        "dashboard",
+        "gaming",
+        "native",
+        "open-source",
+        "pc-gaming",
+        "recompilation",
+        "xbox",
+        "xbox-360",
+        "xbox360"
+      ],
+      "hasIssues": true,
+      "hasDiscussions": false,
+      "defaultBranch": "main",
+      "pushedAt": "2026-11-15T06:56:19Z",
+      "lastCommitAt": "2026-11-15T06:55:48Z",
+      "releases": [
+        {
+          "tag": "v1.34.6",
+          "name": "x360-native v1.34.6 — Stable Release",
+          "url": "https://github.com/fabegalo/x360-native/releases/tag/v1.34.6",
+          "publishedAt": "2026-11-13T04:06:34Z",
+          "prerelease": false,
+          "assets": [
+            {
+              "name": "x360-native-1.34.6-linux-arm64.tar.gz",
+              "size": 69217231,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-linux-arm64.tar.gz"
+            },
+            {
+              "name": "x360-native-1.34.6-linux-x64.tar.gz",
+              "size": 69370937,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-linux-x64.tar.gz"
+            },
+            {
+              "name": "x360-native-1.34.6-macos-arm64.zip",
+              "size": 68587304,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-macos-arm64.zip"
+            },
+            {
+              "name": "x360-native-1.34.6-macos-x64.zip",
+              "size": 68657995,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-macos-x64.zip"
+            },
+            {
+              "name": "x360-native-1.34.6-windows-arm64.zip",
+              "size": 68669479,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-windows-arm64.zip"
+            },
+            {
+              "name": "x360-native-1.34.6-windows-x64.zip",
+              "size": 69259348,
+              "url": "https://github.com/fabegalo/x360-native/releases/download/v1.34.6/x360-native-1.34.6-windows-x64.zip"
+            }
+          ]
+        }
+      ],
+      "stale": false
+    },
+    "ps2-native": {
+      "name": "ps2-native",
+      "url": "https://github.com/fabegalo/ps2-native",
+      "description": "Experimental PlayStation 2 AOT recompilation and native runtime for Windows, Linux and macOS, aiming to preserve the original PS2 experience.",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "C++",
+      "license": "BSD-3-Clause",
+      "topics": [
+        "aot",
+        "cpp",
+        "game-preservation",
+        "linux",
+        "macos",
+        "playstation2",
+        "ps2",
+        "static-recompilation",
+        "windows"
+      ],
+      "hasIssues": true,
+      "hasDiscussions": false,
+      "defaultBranch": "main",
+      "pushedAt": "2026-11-15T12:25:39Z",
+      "lastCommitAt": "2026-11-15T12:21:37Z",
+      "releases": [],
+      "stale": false
+    },
+    "xone-native": {
+      "name": "xone-native",
+      "url": "https://github.com/fabegalo/xone-native",
+      "description": "An open-source Xbox One compatibility project bringing original games and the authentic dashboard to modern PCs. Experimental and actively developed.",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "C++",
+      "license": "BSD-3-Clause",
+      "topics": [
+        "linux",
+        "macos",
+        "native",
+        "native-execution",
+        "open-source",
+        "recompilation",
+        "windows",
+        "xbox-one"
+      ],
+      "hasIssues": true,
+      "hasDiscussions": false,
+      "defaultBranch": "main",
+      "pushedAt": "2026-11-15T11:46:47Z",
+      "lastCommitAt": "2026-11-15T11:45:52Z",
+      "releases": [],
+      "stale": false
+    },
+    "ps3-native": {
+      "name": "ps3-native",
+      "url": "https://github.com/fabegalo/ps3-native",
+      "description": "An open-source PlayStation 3 recompilation project bringing original games and the authentic XMB to modern PCs. Experimental and actively developed.",
+      "stars": 1,
+      "forks": 0,
+      "openIssues": 0,
+      "language": "C++",
+      "license": "BSD-3-Clause",
+      "topics": [
+        "aot",
+        "linux",
+        "macos",
+        "native",
+        "playstation-3",
+        "ps3",
+        "ps3recomp",
+        "recompilation",
+        "static-recompilation",
+        "windows"
+      ],
+      "hasIssues": true,
+      "hasDiscussions": false,
+      "defaultBranch": "main",
+      "pushedAt": "2026-11-15T21:08:25Z",
+      "lastCommitAt": "2026-11-15T21:08:09Z",
+      "releases": [],
+      "stale": false
+    }
+  }
+}
