@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  # Daily rebuild so stars, releases and dates in the static snapshot stay current.
+  schedule:
+    - cron: '17 6 * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      # Uses the workflow token only inside this Node step to raise the API
+      # rate limit. Nothing is exposed to the browser bundle. On any failure the
+      # script keeps the committed snapshot, so the build never depends on GitHub.
+      - name: Refresh GitHub data snapshot
+        run: npm run data
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
+
+      - name: Build and prerender
+        run: npm run build
+
+      - name: Check output
+        run: |
+          test -f dist/index.html
+          test -f dist/pt-br/index.html
+          test -f dist/404.html
+          test -f dist/sitemap.xml
+          for p in x360-native ps2-native xone-native ps3-native; do
+            test -f "dist/projects/$p/index.html"
+            test -f "dist/pt-br/projects/$p/index.html"
+          done
+          if grep -rIl "gh[ops]_[A-Za-z0-9]\{20,\}" dist; then echo "token-like string in output" && exit 1; fi
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
