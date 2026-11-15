@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#05070a" />
+    <!--head-->
+    <title>Native Projects — Four consoles. One native vision.</title>
+    <meta name="description" content="Open, experimental research projects for native recompilation and compatibility of original console software on modern computers." />
+    <link rel="canonical" href="https://fabegalo.github.io/native-projects/" />
+    <!--/head-->
+    <link rel="icon" href="/native-projects/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/native-projects/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/native-projects/apple-touch-icon.png" />
+    <link rel="manifest" href="/native-projects/site.webmanifest" />
+    <script>
+      // Runs before first paint. 1) Applies the saved (or browser) language by
+      // moving between /native-projects/... and /native-projects/pt-br/...
+      // 2) Enables entrance animations only when motion is allowed.
+      (function () {
+        var base = '/native-projects';
+        var path = location.pathname;
+        if (path.indexOf(base) === 0) {
+          var rest = path.slice(base.length) || '/';
+          var isPt = /^\/pt-br(\/|$)/.test(rest);
+          var pref = null;
+          try { pref = localStorage.getItem('np-lang'); } catch (e) {}
+          if (!pref && !isPt && rest === '/' && /^pt\b/i.test(navigator.language || '')) pref = 'pt';
+          if (pref === 'pt' && !isPt) {
+            location.replace(base + '/pt-br' + (rest === '/' ? '/' : rest) + location.search + location.hash);
+            return;
+          }
+          if (pref === 'en' && isPt) {
+            location.replace(base + (rest.replace(/^\/pt-br/, '') || '/') + location.search + location.hash);
+            return;
+          }
+        }
+        if (!window.matchMedia || !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.documentElement.classList.add('motion-ok');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app--></div>
+    <noscript><p style="padding:1rem;color:#e8edf3">JavaScript is disabled: navigation still works through the links above, but some interactive features are unavailable.</p></noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
