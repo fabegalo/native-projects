@@ -1,0 +1,76 @@
+{
+  "x360-native": {
+    "banner": {
+      "width": 1983,
+      "height": 793,
+      "source": "docs/assets/x360-native-banner.png"
+    },
+    "shots": {
+      "dashboard-home": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/evidence/native-n2-2026-10-14/xenos-home.png"
+      },
+      "dashboard-games": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/evidence/native-n2-2026-10-14/native-games.png"
+      },
+      "castle-crashers-menu": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/assets/screenshots/castle-crashers-menu.jpg"
+      },
+      "forza-horizon-driving": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/assets/screenshots/forza-horizon-driving.jpg"
+      },
+      "forza-horizon-2-title": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/assets/screenshots/forza-horizon-2-title.jpg"
+      },
+      "minecraft-tutorial-world": {
+        "width": 1280,
+        "height": 720,
+        "source": "docs/assets/screenshots/minecraft-tutorial-world.jpg"
+      }
+    }
+  },
+  "ps2-native": {
+    "banner": {
+      "width": 1600,
+      "height": 533,
+      "source": "docs/assets/ps2-native-banner.webp"
+    },
+    "shots": {}
+  },
+  "xone-native": {
+    "banner": {
+      "width": 1200,
+      "height": 400,
+      "source": "docs/assets/xone-native-banner.webp"
+    },
+    "shots": {
+      "sonic-mania-title": {
+        "width": 1920,
+        "height": 1091,
+        "source": "docs/assets/screenshots/sonic-mania-title.png"
+      },
+      "local-dashboard-home": {
+        "width": 1920,
+        "height": 1080,
+        "source": "docs/assets/screenshots/local-dashboard-home.png"
+      }
+    }
+  },
+  "ps3-native": {
+    "banner": {
+      "width": 2000,
+      "height": 667,
+      "source": "docs/assets/ps3-native-banner.png"
+    },
+    "shots": {}
+  }
+}

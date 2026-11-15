@@ -1,0 +1,21 @@
+{
+  "name": "Native Projects",
+  "short_name": "Native",
+  "start_url": "/native-projects/",
+  "scope": "/native-projects/",
+  "display": "browser",
+  "background_color": "#05070a",
+  "theme_color": "#05070a",
+  "icons": [
+    {
+      "src": "/native-projects/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "/native-projects/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
