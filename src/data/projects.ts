@@ -20,6 +20,15 @@ export interface Shot {
   caption: L;
 }
 
+export interface Video {
+  /** YouTube video id on the maintainer's channel. */
+  id: string;
+  title: L;
+  caption: L;
+  date: string;
+  duration: string;
+}
+
 export interface Project {
   slug: Slug;
   name: string;
@@ -42,6 +51,7 @@ export interface Project {
   highlights: { date: string; text: L }[];
   platforms: { name: string; state: PlatformState; note?: L }[];
   shots: Shot[];
+  videos: Video[];
   bannerAlt: L;
   bannerIsConcept: boolean;
   docs: { label: L; path: string }[];
@@ -219,6 +229,22 @@ export const projects: Project[] = [
         caption: both('Generic AOT path, trial tutorial.', 'Caminho de AOT genérico, tutorial da versão trial.'),
       },
     ],
+    videos: [
+      {
+        id: 'BiYYYbv1u5M',
+        title: both('Forza Horizon running natively on PC · tech demo with achievements', 'Forza Horizon nativo no PC · tech demo com conquistas'),
+        caption: both('Recorded local session published on the maintainer’s channel. It shows a reached state, not certified gameplay.', 'Sessão local gravada e publicada no canal do mantenedor. Mostra um estado alcançado, não gameplay certificado.'),
+        date: '2026-10-21',
+        duration: '7:58',
+      },
+      {
+        id: 'r1QodQ3AYdw',
+        title: both('Motocross Madness running natively on PC', 'Motocross Madness nativo no PC'),
+        caption: both('Recorded local session published on the maintainer’s channel. It shows a reached state, not certified gameplay.', 'Sessão local gravada e publicada no canal do mantenedor. Mostra um estado alcançado, não gameplay certificado.'),
+        date: '2026-10-21',
+        duration: '3:30',
+      },
+    ],
     bannerAlt: both('Official x360-native banner: an abstract console dissolving into native processor circuitry.', 'Banner oficial do x360-native: um console abstrato se dissolvendo em circuitos de processador nativo.'),
     bannerIsConcept: true,
     docs: [
@@ -349,6 +375,7 @@ export const projects: Project[] = [
       { name: 'macOS Intel', state: 'ci' },
     ],
     shots: [],
+    videos: [],
     bannerAlt: both('Official ps2-native banner: concept art of MIPS code flowing through AOT recompilation into native instructions.', 'Banner oficial do ps2-native: arte conceitual de código MIPS passando pela recompilação AOT até instruções nativas.'),
     bannerIsConcept: true,
     docs: [
@@ -492,6 +519,7 @@ export const projects: Project[] = [
         caption: both('Output of the locally recreated dashboard (local_recreation), inspired by the 2015 NXOE. This is not the original SystemOS.', 'Saída da dashboard recriada localmente (local_recreation), inspirada na NXOE de 2015. Não é o SystemOS original.'),
       },
     ],
+    videos: [],
     bannerAlt: both('Official xone-native banner: concept art of a console-to-PC transition through compatibility layers; not a system screenshot.', 'Banner oficial do xone-native: arte conceitual de uma transição do console para o PC por camadas de compatibilidade; não é uma captura do sistema.'),
     bannerIsConcept: true,
     docs: [
@@ -616,6 +644,7 @@ export const projects: Project[] = [
       { name: 'Windows / Linux ARM64', state: 'planned' },
     ],
     shots: [],
+    videos: [],
     bannerAlt: both('Official ps3-native banner: concept art depicting CELL, SPUs, RSX and native PC execution; not a gameplay screenshot.', 'Banner oficial do ps3-native: arte conceitual com CELL, SPUs, RSX e execução nativa no PC; não é uma captura de gameplay.'),
     bannerIsConcept: true,
     docs: [

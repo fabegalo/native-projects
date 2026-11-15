@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { anyStale, snapshotDate } from '../data/github';
 import { projects } from '../data/projects';
 import { useI18n } from '../i18n/context';
-import { GITHUB_PROFILE, SITE_REPO } from '../lib/site';
+import { GITHUB_PROFILE, SITE_REPO, YOUTUBE_CHANNEL } from '../lib/site';
 import { Mark } from './Icons';
 
 export function Footer() {
@@ -48,6 +48,7 @@ export function Footer() {
           <ul>
             <li><a href={GITHUB_PROFILE} target="_blank" rel="noopener">{t.footer.profile}</a></li>
             <li><a href="https://github.com/fabegalo/x360-native/releases" target="_blank" rel="noopener">{t.footer.releases}</a></li>
+            <li><a href={YOUTUBE_CHANNEL} target="_blank" rel="noopener">{t.footer.youtube}</a></li>
             <li><a href={SITE_REPO} target="_blank" rel="noopener">{t.footer.sourceSite}</a></li>
           </ul>
         </nav>

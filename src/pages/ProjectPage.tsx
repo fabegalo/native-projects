@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { Gallery } from '../components/Gallery';
+import { Videos } from '../components/Videos';
 import { ArrowLeft, Download, External, GitHubIcon, Star } from '../components/Icons';
 import { Motif } from '../components/Motif';
 import { Banner, Notice, Reveal, SectionHeader, StatusBadge, accentStyle } from '../components/ui';
@@ -261,6 +262,15 @@ export function ProjectPage() {
           {project.shots.length ? <Gallery project={project} /> : <p className="empty">{t.project.noShots}</p>}
         </div>
       </section>
+
+      {project.videos.length > 0 && (
+        <section className="section section--tight" aria-labelledby="videos">
+          <div className="container">
+            <SectionHeader id="videos" title={t.project.videos} intro={t.project.videosNote} />
+            <Videos project={project} />
+          </div>
+        </section>
+      )}
 
       <section className="section section--tight" aria-labelledby="releases">
         <div className="container">
