@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { LangProvider, useI18n } from './i18n/context';
 import type { Lang } from './i18n/strings';
 import { About, Contribute, Faq } from './pages/InfoPages';
+import { Tutorials } from './pages/Tutorials';
 import { Home } from './pages/Home';
 import { NotFound } from './pages/NotFound';
 import { ProjectPage } from './pages/ProjectPage';
@@ -70,6 +71,7 @@ function LangRoutes({ lang }: { lang: Lang }) {
           <Route index element={<Home />} />
           <Route path="projects/:slug" element={<ProjectPage />} />
           <Route path="about" element={<About />} />
+          <Route path="tutorials" element={<Tutorials />} />
           <Route path="contribute" element={<Contribute />} />
           <Route path="faq" element={<Faq />} />
           <Route path="*" element={<NotFound />} />

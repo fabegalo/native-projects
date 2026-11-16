@@ -38,6 +38,7 @@ export function Footer() {
         <nav aria-label={t.footer.site}>
           <h2 className="footer__h">{t.footer.site}</h2>
           <ul>
+            <li><Link to={to('/tutorials/')}>{t.nav.tutorials}</Link></li>
             <li><Link to={to('/about/')}>{t.nav.about}</Link></li>
             <li><Link to={to('/contribute/')}>{t.nav.contribute}</Link></li>
             <li><Link to={to('/faq/')}>{t.nav.faq}</Link></li>

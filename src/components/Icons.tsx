@@ -49,3 +49,9 @@ export const Mark = ({ size = 28 }: P) => (
     <rect x="17" y="17" width="9" height="9" rx="2" fill="#6e8bff" />
   </svg>
 );
+export const Copy = ({ size }: P) => (
+  <svg {...base(size)} {...stroke}><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V5a1 1 0 0 1 1-1h10" /></svg>
+);
+export const Check = ({ size }: P) => (
+  <svg {...base(size)} {...stroke}><path d="m5 12 5 5 9-10" /></svg>
+);

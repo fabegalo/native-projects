@@ -48,6 +48,8 @@ jobs:
           test -f dist/index.html
           test -f dist/pt-br/index.html
           test -f dist/404.html
+          test -f dist/tutorials/index.html
+          test -f dist/pt-br/tutorials/index.html
           test -f dist/sitemap.xml
           for p in x360-native ps2-native xone-native ps3-native; do
             test -f "dist/projects/$p/index.html"

@@ -21,6 +21,7 @@ export const pagePaths = [
   '/',
   ...projects.map((p) => `/projects/${p.slug}/`),
   '/about/',
+  '/tutorials/',
   '/contribute/',
   '/faq/',
 ];
@@ -54,6 +55,9 @@ export function headFor(pathname: string): Head {
   } else if (bare === '/contribute/') {
     title = `${t.meta.contributeTitle} · ${t.meta.siteName}`;
     description = t.meta.contributeDescription;
+  } else if (bare === '/tutorials/') {
+    title = `${t.meta.tutorialsTitle} · ${t.meta.siteName}`;
+    description = t.meta.tutorialsDescription;
   } else if (bare === '/faq/') {
     title = `${t.meta.faqTitle} · ${t.meta.siteName}`;
     description = t.meta.faqDescription;

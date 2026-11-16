@@ -148,9 +148,9 @@ export function ProjectPage() {
                     <Download size={16} /> {t.cards.download(release.tag)}
                   </a>
                 )}
-                <a href={`${url}/issues`} className="btn btn--ghost" target="_blank" rel="noopener">
-                  {t.project.issues}
-                </a>
+                <Link to={to(`/tutorials/#${project.slug}`)} className="btn btn--ghost">
+                  {t.project.tutorial}
+                </Link>
               </div>
             </div>
             <dl className="facts">
@@ -285,6 +285,7 @@ export function ProjectPage() {
             <SectionHeader id="resources" title={t.project.resources} />
             <h3 className="h4">{t.project.documentation}</h3>
             <ul className="linklist">
+              <li><Link to={to(`/tutorials/#${project.slug}`)}>{t.project.tutorial} →</Link></li>
               {project.docs.map((d) => (
                 <li key={d.path}>
                   <a href={repoLink(project.slug, d.path)} target="_blank" rel="noopener">

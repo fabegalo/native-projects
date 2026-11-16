@@ -1068,6 +1068,48 @@ h1.section-title { font-size: clamp(2rem, 5vw, 3.4rem); }
 /* ==========================================================================
    Reduced motion: kill every animation and transition
    ========================================================================== */
+/* ---------- Tutorials ---------- */
+.guide-jump { display: flex; flex-wrap: wrap; gap: 10px; margin: 8px 0 28px; }
+.guides { display: grid; gap: 32px; padding-bottom: 24px; }
+.guide {
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 6%, var(--surface)) 0%, var(--surface) 220px);
+  padding: clamp(20px, 4vw, 40px);
+  min-width: 0;
+}
+.guide__title { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.1; margin: 6px 0 8px; color: var(--text); }
+.guide__platform { color: var(--text-2); margin: 0; }
+.guide__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.guide__norelease { margin: 18px 0 0; padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid rgba(245, 184, 74, 0.35); background: rgba(245, 184, 74, 0.07); color: var(--text-2); font-size: 0.95rem; }
+.guide__body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); grid-template-areas: 'req steps' 'side steps'; gap: 8px 40px; margin-top: 10px; align-items: start; }
+.guide__req { grid-area: req; min-width: 0; }
+.guide__steps { grid-area: steps; min-width: 0; }
+.guide__side { grid-area: side; min-width: 0; }
+@media (max-width: 899px) {
+  .guide__body { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'req' 'steps' 'side'; }
+}
+.steps { list-style: none; margin: 0; padding: 0; counter-reset: none; }
+.step { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 14px; position: relative; padding-bottom: 22px; }
+.step:not(:last-child)::before { content: ''; position: absolute; left: 16px; top: 36px; bottom: 4px; width: 2px; background: var(--line-2); }
+.step__n { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 10%, var(--bg)); }
+.step__title { font-size: 1.05rem; margin: 5px 0 6px; color: var(--text); }
+.step__content p { margin: 0; color: var(--text-2); }
+.code { margin: 12px 0 0; border: 1px solid var(--line-2); border-radius: var(--radius-sm); background: var(--bg); overflow: hidden; }
+.code__bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 6px 8px 6px 12px; border-bottom: 1px solid var(--line); font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.code__copy { display: inline-flex; align-items: center; gap: 6px; font: inherit; color: var(--text-2); background: transparent; border: 1px solid var(--line-2); border-radius: 6px; padding: 4px 8px; cursor: pointer; }
+.code__copy:hover { color: var(--text); border-color: var(--accent); }
+.code pre { margin: 0; padding: 12px 14px; overflow-x: auto; font-family: var(--font-mono); font-size: 0.84rem; line-height: 1.6; color: var(--text); white-space: pre; }
+.code pre:focus-visible { outline-offset: -2px; }
+.guide__expect { margin: 0; padding-left: 18px; color: var(--text-2); }
+.guide__expect li + li { margin-top: 10px; }
+.guide__expect li::marker { color: var(--warn); }
+.keys { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; margin: 0; }
+.keys div { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--radius-sm); }
+.keys dd { margin: 0; color: var(--text-2); font-size: 0.92rem; }
+kbd { font-family: var(--font-mono); font-size: 0.8rem; padding: 2px 7px; border-radius: 5px; border: 1px solid var(--line-2); border-bottom-width: 2px; background: var(--surface-2); color: var(--text); white-space: nowrap; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;

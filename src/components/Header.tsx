@@ -60,6 +60,7 @@ export function Header() {
   const links = [
     { href: to('/#projects'), label: t.nav.projects, hash: true },
     { href: to('/#vision'), label: t.nav.vision, hash: true },
+    { href: to('/tutorials/'), label: t.nav.tutorials },
     { href: to('/about/'), label: t.nav.about },
     { href: to('/contribute/'), label: t.nav.contribute },
     { href: to('/faq/'), label: t.nav.faq },
