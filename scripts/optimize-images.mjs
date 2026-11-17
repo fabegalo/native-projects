@@ -37,6 +37,7 @@ const sources = {
     shots: {
       'sonic-mania-title': 'docs/assets/screenshots/sonic-mania-title.png',
       'local-dashboard-home': 'docs/assets/screenshots/local-dashboard-home.png',
+      'forza-horizon-2-title': 'docs/assets/screenshots/forza-horizon-2-title.webp',
     },
   },
   'ps3-native': { banner: 'docs/assets/ps3-native-banner.png', shots: {} },

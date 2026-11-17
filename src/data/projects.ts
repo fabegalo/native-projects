@@ -513,6 +513,12 @@ export const projects: Project[] = [
         caption: both('Rendered by the ERA runtime, Windows x64, 15 Nov 2026. Gameplay not certified.', 'Renderizada pelo runtime ERA, Windows x64, 15/11/2026. Gameplay não certificado.'),
       },
       {
+        id: 'forza-horizon-2-title',
+        kind: 'capture',
+        title: both('Forza Horizon 2 · original title screen', 'Forza Horizon 2 · tela de título original'),
+        caption: both('Shown in the xone-era window on Windows x64, with the game set to Brazilian Portuguese. Gameplay not certified.', 'Exibida na janela do xone-era no Windows x64, com o jogo em português do Brasil. Gameplay não certificado.'),
+      },
+      {
         id: 'local-dashboard-home',
         kind: 'local-recreation',
         title: both('Local dashboard · Home after title return', 'Dashboard local · Home após o retorno do título'),
